@@ -1,0 +1,5 @@
+version: '3'
+
+services:
+  spdlog-issue-2681:
+    tty: true

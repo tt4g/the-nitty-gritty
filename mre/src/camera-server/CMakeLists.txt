@@ -1,5 +1,6 @@
 set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 
+add_subdirectory(spdlog)
 if(NOT TARGET spdlog)
     # Stand-alone build
     find_package(spdlog REQUIRED)

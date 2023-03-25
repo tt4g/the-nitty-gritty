@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  spdlog-issue-2681:
+    image: spdlog-issue-2681:0.0.1
+    container_name: spdlog-issue-2681
+    build:
+      context: docker
+      dockerfile: Dockerfile
+    volumes:
+      - type: bind
+        source: mre/src/camera-server
+        target: /workspace
+        consistency: cached
