@@ -23,7 +23,7 @@ add_compile_options(-Wall -Wextra -pedantic -O3 -Wno-c11-extensions)
 add_definitions(-DCROW_ENABLE_SSL)
 add_executable(cs main.cpp)
 add_library(deviceManager deviceManager.cpp)
-
+target_link_libraries(deviceManager spdlog::spdlog)
 
 target_link_libraries(cs deviceManager pthread rt ssl crypto spdlog::spdlog)
 
