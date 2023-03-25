@@ -25,7 +25,7 @@ add_executable(cs main.cpp)
 add_library(deviceManager deviceManager.cpp)
 target_link_libraries(deviceManager spdlog::spdlog)
 
-target_link_libraries(cs deviceManager pthread rt ssl crypto spdlog::spdlog)
+target_link_libraries(cs deviceManager pthread spdlog::spdlog)
 
 add_custom_command(
   TARGET cs POST_BUILD
